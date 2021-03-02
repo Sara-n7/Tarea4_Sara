@@ -1,5 +1,9 @@
 package cuentas;
 
+/**
+ *
+ * @author Sara
+ */
 public class CCuenta {
 
 
@@ -8,10 +12,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     *
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -19,11 +33,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     *
+     * @return
+     */
     public double estado()
     {
         return saldo;
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -31,6 +54,11 @@ public class CCuenta {
         setSaldo(saldo + cantidad);
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -62,7 +90,7 @@ public class CCuenta {
     }
 
     /**
-     * @param tipoInterÃ the tipoInterÃ to set
+     * @param tipoInterés
      */
     public void setTipoInterÃ(double tipoInterés) {
         this.tipoInterés = tipoInterés;
